@@ -1,0 +1,10 @@
+﻿  XFileUtil.cpp
+  terrain.cpp
+  PhysicalObject.cpp
+  D3DGame.cpp
+c:\users\user\desktop\범수자료\18.지형\d3dgame.cpp(534): warning C4316: 'ZCamera': object allocated on the heap may not be aligned 16
+  Camera.cpp
+  Bitmap.cpp
+  Generating Code...
+Bitmap.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  D3DGame.vcxproj -> C:\Users\user\Desktop\범수자료\18.지형\.\Debug\D3DGame.exe
