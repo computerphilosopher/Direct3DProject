@@ -76,6 +76,8 @@ public:
 
 	/// 카메라 좌표계의 Z축방향으로 dist만큼 전진한다.(후진은 -dist를 넣으면 된다.)
 	D3DXMATRIXA16*	MoveLocalZ( float dist );
+	
+	D3DXMATRIXA16* MoveViewDirection(float dist);
 };
 
 #endif // _ZCAMERA_H_

@@ -114,6 +114,22 @@ D3DXMATRIXA16* ZCamera::MoveLocalZ( float dist )
 	return SetView( &vNewEye, &vNewDst, &m_vUp );
 }
 
+D3DXMATRIXA16 * ZCamera::MoveViewDirection(float dist)
+{
+	D3DXVECTOR3 vNewEye	= m_vEye;
+	D3DXVECTOR3 vNewDst	= m_vLookat;
+
+	const D3DXVECTOR3 direction = m_vEye - m_vLookat;
+
+	D3DXVECTOR3 vMove;
+	D3DXVec3Normalize(&vMove, &direction);
+
+	vMove	*= dist;
+	vNewEye += vMove;
+	vNewDst += vMove;
+	return SetView( &vNewEye, &vNewDst, &m_vUp );
+}
+
 /// 월드좌표계의 *pv값의 위치로 카메라를 이동한다.
 D3DXMATRIXA16* ZCamera::MoveTo( D3DXVECTOR3* pv )
 {
